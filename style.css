@@ -1,0 +1,102 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+}
+
+h1 {
+  color: white;
+  position: absolute;
+  text-align: center;
+  margin-bottom: 10rem;
+  font: 5rem "Signika Negative", sans-serif;
+}
+
+h2 {
+  color: white;
+  position: absolute;
+  margin-top:10rem;
+  font: 2rem "Signika Negative", sans-serif;
+}
+
+.insta {
+  position: absolute;
+  margin-top: 20rem;
+  color: white;
+  font: 300 1rem "Signika Negative", sans-serif;
+}
+
+.github {
+  position: absolute;
+  margin-top: 24rem;
+  color: white;
+  font: 300 1rem "Signika Negative", sans-serif;
+}
+
+
+.wavy {
+  position: relative;
+  width: 30rem;
+  height: 3rem;
+  overflow: hidden;
+
+}
+
+.wavy::before {
+  content: 'aaaaaaaaaaaaaaaaaaaa';
+  position: absolute;
+  top: -42px;
+  left: 0;
+  font-size: 4em;
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: white;
+  text-decoration-line: underline;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate
+{ 
+  0%
+  {
+    transform:  translateX(-1px);
+  }
+  100%
+  {
+    transform: translateX(-55px);
+  }
+}
+
+/* Breaking Point -> Mobile */
+@media (max-width: 550px) {
+
+  body {
+    min-height: 90vh;
+  }
+
+  h1 {
+    margin-bottom: 10rem;
+    font: 400 3.5rem "Signika Negative", sans-serif;
+  }
+
+  h2 {
+    margin-top: 10rem;
+  }
+
+  .insta {
+    margin-top: 17rem;
+  }
+
+  .github {
+    margin-top: 20.5rem;
+  }
+}
